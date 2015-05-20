@@ -1,0 +1,63 @@
+body {
+  font-family: 'Open Sans', 'Helvetica Neue', helvetica, sans-serif;
+  color: #333;
+  background: #fff url(http://rubymonstas.org/images/background.jpg) repeat;
+  background-size: 60%;
+  background-attachment: fixed;
+}
+
+article {
+  max-width: 70rem;
+  margin: 5rem auto 5rem auto;
+  padding: 2rem 5rem;
+  background: #fff;
+  text-align: center;
+  border-radius: 1rem;
+}
+
+h1 {
+  font-size: 40px;
+  font-weight: normal;
+}
+
+h2 {
+  font-size: 22px;
+  font-weight: normal;
+  margin-bottom: 24px;
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+}
+
+li, p {
+  font-size: 18px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.glyphicon {
+  font-size: 14px;
+}
+
+form {
+  margin: 14px 0;
+}
+
+input {
+  line-height: 2;
+  padding: 10px;
+}
+
+.btn-default {
+  background-color: #e2e2e2;
+}
+
+#create_new {
+  color: #ee4444;
+  text-decoration: underline;
+  font-size: 14px;
+}

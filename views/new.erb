@@ -1,0 +1,15 @@
+<h2>Add a new participant:</h2>
+<% if @message %>
+  <div class="alert alert-danger" role="alert">
+    <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+    <span class="sr-only">Error:</span>
+    <%= @message %>
+  </div>
+<% end %>
+
+<form action="/members" method="post">
+  <input type="text" name="name" value="<%= @name %>">
+  <input type="submit" class="btn btn-default btn-sm">
+</form>
+
+<a href="/members"><< Back</a>

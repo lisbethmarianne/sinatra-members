@@ -1,0 +1,16 @@
+<h2>Edit Participant:</h2>
+<% if @message %>
+  <div class="alert alert-danger" role="alert">
+    <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+    <span class="sr-only">Error:</span>
+    <%= @message %>
+  </div>
+<% end %>
+
+<form action="/members/<%= @name %>" method="post">
+  <input name="_method" type="hidden" value="put">
+  <input class="input" type="text" name="new_name" value="<%= @name %>">
+  <input type="submit" class="btn btn-default btn-sm">
+</form>
+
+<a href="/members"><< Back</a>

@@ -18,7 +18,7 @@ class NameValidator
 
     def validate
       if @name.empty?
-        @messages << "You need to enter a name"
+        @messages << "You need to enter a name."
       elsif @names.include?(@name)
         @messages << "#{@name} is already included in our list."
       end
@@ -40,7 +40,7 @@ class MembersApp < Sinatra::Base
   end
 
   def update_members(filename, members, old_name, new_name)
-    members.map! do |name|
+    members = members.map do |name|
       if name == old_name
         name = new_name
       else
@@ -53,7 +53,7 @@ class MembersApp < Sinatra::Base
   end
 
   def delete_member(filename, members, name)
-    members.delete(name)
+    members = members.reject { |member| member == name }
     File.open(filename, "w") do |file|
       file.puts(members)
     end

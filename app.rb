@@ -53,7 +53,7 @@ class MembersApp < Sinatra::Base
   end
 
   def delete_member(filename, members, name)
-    members = members.reject { |member| member == name }
+    members = members.reject { |member| member == name }
     File.open(filename, "w") do |file|
       file.puts(members)
     end
